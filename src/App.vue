@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-     <app-header></app-header>
+     <!-- <app-header></app-header> -->
     <router-view></router-view>
-    <Home />
   </div>
 </template>
 
@@ -14,7 +13,7 @@ export default {
   name: 'App',
   components: {
     Home,
-     appHeader: Header
+    appHeader: Header
   }
 }
 </script>
@@ -42,6 +41,7 @@ export default {
 
 body {
   margin: 0px;  
+  background-color: #000;
 }
 
 .light-text {
