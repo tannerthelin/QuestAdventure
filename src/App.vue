@@ -44,7 +44,25 @@ body {
   background-color: #000;
 }
 
+p {
+  margin: 0px;
+}
+
 .light-text {
   color: #8F8F8F;
+}
+
+.main-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.content-container {
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
 }
 </style>
