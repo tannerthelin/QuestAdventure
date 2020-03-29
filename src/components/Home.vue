@@ -11,13 +11,13 @@
     <!-- This is where we can store things in the databade (may need to be moved later) -->
     <div class="form-group">
       <label>Username</label>
-      <input class="form-control" type="text" />
+      <input class="form-control" type="text" v-model="user.username" />
     </div>
     <div class="form-group">
       <label>Mail</label>
-      <input class="form-control" type="text" />
+      <input class="form-control" type="text" v-model="user.email" />
     </div>
-    <button class="byn btn-primary">Submit</button>
+    <button class="btn btn-primary" @click="submit">Submit</button>
   </div>
 </template>
 
@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     submit() {
-      console.log(user);
+      console.log(this.user);
     }
   }
 };
