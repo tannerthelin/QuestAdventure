@@ -33,7 +33,19 @@ export default {
   },
   methods: {
     submit() {
-      console.log(this.user);
+      this.$http
+        .post(
+          "https://questadventure-46622.firebaseio.com/data.json",
+          this.user
+        )
+        .then(
+          response => {
+            console.log(response);
+          },
+          error => {
+            console.log(error);
+          }
+        );
     }
   }
 };
