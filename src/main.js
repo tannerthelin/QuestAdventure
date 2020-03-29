@@ -1,8 +1,11 @@
 import Vue from "vue";
 import App from "./App.vue";
+import VueResource from "vue-resource";
 import store from "./store";
-import VueRouter from 'vue-router';
-import router from './router';
+import VueRouter from "vue-router";
+import router from "./router";
+
+Vue.use(VueResource);
 
 Vue.config.productionTip = false;
 
