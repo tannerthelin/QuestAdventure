@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-     <app-header></app-header>
+     <!-- <app-header></app-header> -->
     <router-view></router-view>
-    <Home />
   </div>
 </template>
 
@@ -14,7 +13,7 @@ export default {
   name: 'App',
   components: {
     Home,
-     appHeader: Header
+    appHeader: Header
   }
 }
 </script>
@@ -42,9 +41,28 @@ export default {
 
 body {
   margin: 0px;  
+  background-color: #000;
+}
+
+p {
+  margin: 0px;
 }
 
 .light-text {
   color: #8F8F8F;
+}
+
+.main-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.content-container {
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
 }
 </style>
