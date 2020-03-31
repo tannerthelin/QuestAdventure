@@ -6,7 +6,7 @@
       adventure game created for DGM-3780 at Utah Valley University.
     </p>
     <br /><br />
-    <p class="light-text">Press any key to begin.</p>
+    <p class="light-text" v-on:click="onEnter">Press any key to begin.</p>
 
     <!-- This is where we can store things in the databade (may need to be moved later) -->
     <div class="form-group">
@@ -34,8 +34,12 @@ export default {
   methods: {
     submit() {
       console.log(this.user);
-    }
+    },
+     onEnter: function (event) {
+    alert('enter has been hit');
+  },
   }
+ 
 };
 </script>
 
