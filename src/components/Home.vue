@@ -6,7 +6,7 @@
       adventure game created for DGM-3780 at Utah Valley University.
     </p>
     <br /><br />
-    <p class="light-text" v-on:click="onEnter">Press any key to begin.</p>
+    <button class="btn btn-primary click" router-link to="/character"><router-link to="/character">Click to get started</router-link></button>
 
     <!-- This is where we can store things in the databade (may need to be moved later) -->
     <div class="form-group">
@@ -33,8 +33,6 @@ export default {
   },
   methods: {
     submit() {
-      console.log(this.user);
-    },
       this.$http
         .post(
           "https://questadventure-46622.firebaseio.com/data.json",
@@ -47,9 +45,10 @@ export default {
           error => {
             console.log(error);
           }
-        )
+        );
     }
   }
+};
 </script>
 
 <style scoped>
@@ -68,4 +67,21 @@ img {
 p {
   max-width: 616px;
 }
+
+.click {
+  padding: 7px 12px;
+  border-radius: 5px;
+  margin: 12px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: rgb(105, 105, 105);
+}
+
+
 </style>

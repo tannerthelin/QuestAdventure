@@ -4,8 +4,8 @@
         <!-- Constrains the main content to 700px -->
         <div class="content-container">
             <p>What is your character's name?</p>
-            <form action="">
-                <input type="text" placeholder="Enter name here...">
+            <form action="/game">
+                <input type="text" input placeholder="Enter name here...">
             </form>
         </div>
         <AppFooter />
@@ -19,6 +19,8 @@ export default {
     components: {
         AppFooter
     }
+    
+
 }
 </script>
 
