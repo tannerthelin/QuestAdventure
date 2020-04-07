@@ -7,7 +7,6 @@
 
             <!-- A character select element (PEASANT) -->
              <router-link to="/name">
-            <div class="character-select">
             <div class="character-select" @click="changeCharacter('peasant')">
                 <img class="triangle" src="../assets/triangle.svg" width="7px">
                 <img class="character-image" src="../assets/char-peasant.png" alt="Peasant Character" width="81px">
@@ -20,7 +19,6 @@
 
             <!-- A character select element (KNIGHT) -->
             <router-link to="/name">
-            <div class="character-select">
             <div class="character-select" @click="changeCharacter('knight')">
                 <img class="triangle" src="../assets/triangle.svg" width="7px">
                 <img class="character-image" src="../assets/char-knight.png" alt="Peasant Character" width="81px">
@@ -34,7 +32,6 @@
 
             <!-- A character select element (WIZARD) -->
              <router-link to="/name">
-            <div class="character-select" id="last-character">
             <div class="character-select" id="last-character" @click="changeCharacter('wizard')">
                 <img class="triangle" src="../assets/triangle.svg" width="7px">
                 <img class="character-image" src="../assets/char-wizard.png" alt="Peasant Character" width="81px">
