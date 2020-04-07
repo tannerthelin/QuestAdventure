@@ -7,6 +7,7 @@
             <form action="/game">
                 <input type="text" input placeholder="Enter name here...">
             </form>
+            <div class="button" @click="changeName(name)">Change Name</div>
         </div>
         <AppFooter />
     </div>
@@ -18,6 +19,16 @@ import AppFooter from './Footer.vue';
 export default {
     components: {
         AppFooter
+    },
+    data () {
+        return {
+            name: ''
+        }
+    },
+    methods: {
+        changeName(name) {
+            this.$store.dispatch("changeName", name);
+        },
     }
     
 
@@ -40,5 +51,24 @@ export default {
 
     input:focus {
         outline: none;
+    }
+
+    .button {
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 12px;
+        padding: 6px 10px;
+        background-color: #393939;
+        color: #757575;
+        border-radius: 3px;
+        -moz-box-shadow:    inset 0 -4px 0px #252525;
+        -webkit-box-shadow: inset 0 -4px 0px #252525;
+        box-shadow:         inset 0 -4px 0px #252525;
+        transition: .15s ease;
+    }
+
+    .button:hover {
+        color: #949494;
+        background-color: #494949;
     }
 </style>
