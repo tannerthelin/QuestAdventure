@@ -6,6 +6,7 @@
             <p>Select your character</p><br>
 
             <!-- A character select element (PEASANT) -->
+             <router-link to="/name">
             <div class="character-select" @click="changeCharacter('peasant')">
                 <img class="triangle" src="../assets/triangle.svg" width="7px">
                 <img class="character-image" src="../assets/char-peasant.png" alt="Peasant Character" width="81px">
@@ -14,8 +15,10 @@
                     <p class="light-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
             </div>
+             </router-link>
 
             <!-- A character select element (KNIGHT) -->
+            <router-link to="/name">
             <div class="character-select" @click="changeCharacter('knight')">
                 <img class="triangle" src="../assets/triangle.svg" width="7px">
                 <img class="character-image" src="../assets/char-knight.png" alt="Peasant Character" width="81px">
@@ -24,8 +27,11 @@
                     <p class="light-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
             </div>
+  </router-link>
+
 
             <!-- A character select element (WIZARD) -->
+             <router-link to="/name">
             <div class="character-select" id="last-character" @click="changeCharacter('wizard')">
                 <img class="triangle" src="../assets/triangle.svg" width="7px">
                 <img class="character-image" src="../assets/char-wizard.png" alt="Peasant Character" width="81px">
@@ -34,7 +40,8 @@
                     <p class="light-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
             </div>        
-        
+         </router-link>
+         
         <!-- End of character list -->
 
         </div>
@@ -95,4 +102,17 @@ export default {
         margin-left: -36px;
         opacity: 0;
     }
+
+    a {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        color: white;
+    }
+
+
+    a:hover {
+        color: rgb(83, 83, 83);
+    }
+
 </style>

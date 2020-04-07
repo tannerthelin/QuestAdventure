@@ -4,8 +4,8 @@
         <!-- Constrains the main content to 700px -->
         <div class="content-container">
             <p>What is your character's name?</p>
-            <form action="">
-                <input type="text" placeholder="Enter name here..." v-model="name">
+            <form action="/game">
+                <input type="text" input placeholder="Enter name here...">
             </form>
             <div class="button" @click="changeName(name)">Change Name</div>
         </div>
@@ -30,6 +30,8 @@ export default {
             this.$store.dispatch("changeName", name);
         },
     }
+    
+
 }
 </script>
 
