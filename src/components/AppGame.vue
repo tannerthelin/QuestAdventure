@@ -12,7 +12,7 @@
 
             <!-- Display the current choices -->
             <div class="choices-container">
-                <div v-for="choice in currentStory.choices" :key="choice.id" class="story-choice">
+                <div v-for="choice in currentStory.choices" :key="choice.id" class="story-choice" @click="changeStory(choice.id)">
                     <img class="triangle" src="../assets/triangle.svg" width="7px">
                     <p>{{choice.choiceText}}</p>
                 </div>
@@ -34,21 +34,15 @@ export default {
     },
     data () {
         return {
-            currentStory: {
-                id: '001',
-                story: 'you come across a bear. the bear sees you and starts slowly walking towards you.',
-                choices: [
-                    {
-                        id: '002',
-                        choiceText: 'Run away from the bear'
-                    },
-                    {
-                        id: '003',
-                        choiceText: 'Fight the bear'
-                    },
-                ]
-            }            
+            // Set the first story to the first object in the store
+            currentStory: this.$store.state.story[0] 
         }        
+    },
+    methods: {
+        // This is how the story gets updated when the user selects a choice
+        changeStory(thisID) {
+            this.currentStory = this.$store.state.story[thisID];
+        }
     }
 }
 </script>

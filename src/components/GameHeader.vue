@@ -2,8 +2,11 @@
     <div class="header-container">
         <div class="player-content">
             <div class="player-image">
-                <img class="character-image" src="../assets/char-peasant.png" alt="Peasant Character" width="80px"/>
-                <p class="player-name">Samwise</p>
+                <img v-if="currentCharacter === 'peasant'" class="character-image" src="../assets/char-peasant.png"  alt="Peasant Character" width="80px"/>
+                <img v-if="currentCharacter === 'knight'" class="character-image" src="../assets/char-knight.png"  alt="Peasant Character" width="80px"/>
+                <img v-if="currentCharacter === 'wizard'" class="character-image" src="../assets/char-wizard.png"  alt="Peasant Character" width="80px"/>
+                
+                <p class="player-name">{{this.$store.state.characterInfo.name}}</p>
             </div>
             <div class="player-info">
                 <div class="health">
@@ -36,6 +39,32 @@
         <div></div>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+        currentCharacter: 'peasant',
+        };
+     },
+    mounted() {
+        console.log('it was mounted.')
+
+        if (this.$store.state.characterInfo.character === 'peasant') {
+            console.log('your character is a peasant');
+            this.currentCharacter = 'peasant';
+        } else if (this.$store.state.characterInfo.character === 'knight') {
+            console.log('your character is a knight');
+            this.currentCharacter = 'knight';            
+        } else if (this.$store.state.characterInfo.character === 'wizard') {
+            console.log('your character is a wizard');
+            this.currentCharacter = 'wizard';            
+        } else {
+            console.log('none of them, I guess.')
+        }
+    }
+}
+</script>
 
 <style scoped>
 

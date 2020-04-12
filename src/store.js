@@ -6,12 +6,57 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         characterInfo: {
-            name: '',
+            name: 'name here',
             character: ''
         },
-        story: {
-            // Story Elements will go here
-        }
+        story: [
+            {
+                id: '0',
+                story: 'You wake up in your dusty room. Books and scrolls cover the walls. All of the sudden, you hear a knock at your door.',
+                choices: [
+                    {
+                        id: '1',
+                        choiceText: 'Answer the door'
+                    },
+                    {
+                        id: '2',
+                        choiceText: 'Do not answer the door'
+                    },
+                ]
+            },
+            {
+                id: '1',
+                story: 'You open the door to see a small goblin. He tells you that his goblin village has been raided by a dragon and that they need your help.',
+                choices: [
+                    {
+                        id: '3',
+                        choiceText: 'Agree to help the goblin village'
+                    },
+                    {
+                        id: '3',
+                        choiceText: 'Slam the door in his face'
+                    },
+                ]
+            },
+            {
+                id: '2',
+                story: 'You decide not to answer the door. After a few more knocks, you hear the visitor sigh and walk away from your door.',
+                choices: [
+                    {
+                        id: '3',
+                        choiceText: 'Peek outside the door'
+                    },
+                    {
+                        id: '3',
+                        choiceText: 'Go back to sleep'
+                    },
+                ]
+            },
+            {
+                id: '3',
+                story: 'PLACEHOLDER: this is the end of the story for now.',
+            }
+        ]
     },
     mutations: {
         'CHANGE_CHARACTER' (state, payload) {

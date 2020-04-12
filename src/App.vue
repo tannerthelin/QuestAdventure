@@ -24,6 +24,10 @@ export default {
   src: url(./assets/fonts/CarbonBold.woff) format('woff');
 }
 
+body {
+  overflow: hidden;
+}
+
 #app {
   font-family: 'Carbon', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -64,5 +68,29 @@ p {
   max-width: 700px;
   width: 100%;
   margin: auto;
+}
+
+.button {
+  display: inline-block;
+  font-family: 'CarbonBold';
+  text-transform: uppercase;        
+  font-size: 16px;
+  margin-top: 12px;
+  padding: 6px 10px;
+  background-color: #393939;
+  color: #757575 !important;
+  border-radius: 3px;
+  -moz-box-shadow:    inset 0 -4px 0px #252525;
+  -webkit-box-shadow: inset 0 -4px 0px #252525;
+  box-shadow:         inset 0 -4px 0px #252525;
+  transition: .15s ease;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+    color: #949494 !important;
+    background-color: #494949;
 }
 </style>

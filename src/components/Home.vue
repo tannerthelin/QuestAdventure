@@ -5,19 +5,24 @@
       Welcome to <span class="light-text">Simple Dungeon</span> -- a text
       adventure game created for DGM-3780 at Utah Valley University.
     </p>
-    <br /><br />
-    <button class="btn btn-primary click" router-link to="/character"><router-link to="/character">Click to get started</router-link></button>
+    <br />
+
+  <router-link class="button" to="/character">Click to get started</router-link>
+  <p class="button" @click="showAdmin = !showAdmin">Toggle Admin</p>
+  <br />
 
     <!-- This is where we can store things in the databade (may need to be moved later) -->
-    <div class="form-group">
-      <label>Username</label>
-      <input class="form-control" type="text" v-model="user.username" />
+    <div v-if="showAdmin">
+      <div class="form-group">
+        <label>Username</label>
+        <input class="form-control" type="text" v-model="user.username" />
+      </div>
+      <div class="form-group">
+        <label>Mail</label>
+        <input class="form-control" type="text" v-model="user.email" />
+      </div>
+      <button class="btn btn-primary" @click="submit">Submit</button>
     </div>
-    <div class="form-group">
-      <label>Mail</label>
-      <input class="form-control" type="text" v-model="user.email" />
-    </div>
-    <button class="btn btn-primary" @click="submit">Submit</button>
   </div>
 </template>
 
@@ -28,7 +33,8 @@ export default {
       user: {
         username: "",
         email: ""
-      }
+      },
+      showAdmin: false
     };
   },
   methods: {
