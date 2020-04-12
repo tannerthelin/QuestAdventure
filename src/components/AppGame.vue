@@ -6,7 +6,9 @@
         
         <!-- Constrains the main content to 700px -->
         <div class="content-container">
-
+   <div class="resetbutton">
+    <router-link class="button" to="/Home">RESET</router-link>
+</div>
             <!-- Display the current story -->
             <p>{{currentStory.story}}</p>
 
@@ -55,6 +57,7 @@ export default {
 
 .main-container {
     height: 100% !important;
+   
 }
 
 .choices-container {
@@ -92,5 +95,13 @@ export default {
 .game-header {
     position: absolute;
     top: 0;
+    width: 100%;
 }
+
+.resetbutton {
+    display: flex;
+justify-content: flex-end;
+margin-bottom: 25px;
+}
+
 </style>

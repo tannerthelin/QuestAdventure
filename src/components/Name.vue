@@ -3,6 +3,9 @@
     <div class="main-container">
         <!-- Constrains the main content to 700px -->
         <div class="content-container">
+            <div class="resetbutton">
+    <router-link class="button" to="/Home">RESET</router-link>
+</div>
             <p>What is your character's name?</p>
             <form action="/game">
                 <input type="text" v-model="name" input placeholder="Enter name here...">
@@ -56,4 +59,12 @@ export default {
     input:focus {
         outline: none;
     }    
+
+    .resetbutton {
+    display: flex;
+justify-content: flex-end;
+margin-bottom: 5px;
+}
+
+
 </style>
