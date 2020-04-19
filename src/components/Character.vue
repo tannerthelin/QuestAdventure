@@ -3,6 +3,9 @@
     <div class="main-container">
         <!-- Constrains the main content to 700px -->
         <div class="content-container">
+             <div class="resetbutton">
+    <router-link class="button" to="/Home">RESET</router-link>
+</div>
             <p>Select your character</p><br>
 
             <!-- A character select element (PEASANT) -->
@@ -114,5 +117,15 @@ export default {
     a:hover {
         color: rgb(83, 83, 83);
     }
+
+    .resetbutton {
+    display: flex;
+justify-content: flex-end;
+margin-bottom: 5px;
+}
+
+.button {
+    padding: 5px 15px;
+}
 
 </style>
