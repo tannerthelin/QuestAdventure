@@ -7,7 +7,6 @@
         <!-- Constrains the main content to 700px -->
         <div class="content-container">
 
-
             <div class="death-container" v-if="hasDied === true">
                 <img src="../assets/skull.png" alt="sword" width="65px"/>
                 <br><br>
@@ -20,9 +19,6 @@
             </router-link>   
             </div>
 
-   <div class="resetbutton">
-    <router-link class="button" to="/Home">RESET</router-link>
-</div>
             <!-- Display the current story -->
             <p v-if="hasDied === false">{{currentStory.story}}</p>
 
