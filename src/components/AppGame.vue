@@ -20,6 +20,9 @@
             </router-link>   
             </div>
 
+   <div class="resetbutton">
+    <router-link class="button" to="/Home">RESET</router-link>
+</div>
             <!-- Display the current story -->
             <p v-if="hasDied === false">{{currentStory.story}}</p>
 

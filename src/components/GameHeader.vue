@@ -5,7 +5,6 @@
                 <img v-if="currentCharacter === 'peasant'" class="character-image" src="../assets/char-peasant.png"  alt="Peasant Character" width="80px"/>
                 <img v-if="currentCharacter === 'knight'" class="character-image" src="../assets/char-knight.png"  alt="Peasant Character" width="80px"/>
                 <img v-if="currentCharacter === 'wizard'" class="character-image" src="../assets/char-wizard.png"  alt="Peasant Character" width="80px"/>
-                
                 <p class="player-name">{{this.$store.state.characterInfo.name}}</p>
             </div>
             <div class="player-info">
@@ -34,8 +33,8 @@
                         <p>Potion</p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> 
+        </div> 
         <div></div>
     </div>
 </template>
@@ -70,11 +69,12 @@ export default {
 
 .header-container {
     padding: 20px;
+    
 }
 
 .player-content {
     display: flex;
-    align-items: center;
+    align-items: center;  
 }
 
 .player-image {
@@ -119,4 +119,6 @@ export default {
     line-height: 13px;
     opacity: 0.3;
 }
+
+
 </style>
