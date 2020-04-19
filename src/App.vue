@@ -68,6 +68,7 @@ p {
   max-width: 700px;
   width: 100%;
   margin: auto;
+  position: relative;
 }
 
 .button {
@@ -75,7 +76,7 @@ p {
   font-family: 'CarbonBold';
   text-transform: uppercase;        
   font-size: 16px;
-  margin-top: 12px;
+  margin-bottom: 12px;
   padding: 6px 10px;
   background-color: #393939;
   color: #757575 !important;
