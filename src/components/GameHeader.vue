@@ -36,6 +36,11 @@
             </div> 
         </div> 
         <div></div>
+        <div class="button-container">
+            <div class="resetbutton">
+                <router-link class="button" to="/Home">RESET</router-link>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -67,14 +72,26 @@ export default {
 
 <style scoped>
 
-.header-container {
+.button-container {
     padding: 20px;
-    
+}
+
+.button a {
+    margin-top: 0px !important;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100vw;
 }
 
 .player-content {
+    padding: 20px;
     display: flex;
     align-items: center;  
+    flex-grow: 0;
 }
 
 .player-image {

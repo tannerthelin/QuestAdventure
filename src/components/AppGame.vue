@@ -15,8 +15,8 @@
                 <p>{{currentStory.story}}</p>
                 <br>
                 <router-link to="/character">
-                <div class="button" @click="changeName(name)">Start Over</div>
-            </router-link>   
+                    <div class="button" @click="changeName(name)">Start Over</div>
+                </router-link>
             </div>
 
             <!-- Display the current story -->
@@ -117,7 +117,6 @@ export default {
 .game-header {
     position: absolute;
     top: 0;
-    width: 100%;
 }
 
 .resetbutton {
