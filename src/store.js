@@ -13,6 +13,7 @@ export default new Vuex.Store({
             {
                 id: '0',
                 story: 'You wake up in your dusty room. Books and scrolls cover the walls. All of the sudden, you hear a knock at your door.',
+                death: false,
                 choices: [
                     {
                         id: '1',
@@ -27,6 +28,7 @@ export default new Vuex.Store({
             {
                 id: '1',
                 story: 'You open the door to see a small goblin. He tells you that his goblin village has been raided by a dragon and that they need your help.',
+                death: false,
                 choices: [
                     {
                         id: '3',
@@ -41,6 +43,7 @@ export default new Vuex.Store({
             {
                 id: '2',
                 story: 'You decide not to answer the door. After a few more knocks, you hear the visitor sigh and walk away from your door.',
+                death: false,
                 choices: [
                     {
                         id: '3',
@@ -54,6 +57,7 @@ export default new Vuex.Store({
             },
             {
                 id: '3',
+                death: false,
                 story: 'PLACEHOLDER: this is the end of the story for now.',
             }
         ]
