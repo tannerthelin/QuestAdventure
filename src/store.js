@@ -59,6 +59,11 @@ export default new Vuex.Store({
 				],
 			},
 			{
+				id: "3",
+				story: "PLACEHOLDER: this is the end of the story for now.",
+				death: true,
+			},
+			{
 				id: "4",
 				story:
 					"The goblin leads you to their village where you see buildings burned and other goblins injured. He hands you a map with the location of the Dragons lair. He then proceeds to ask if he can join you in this quest to hunt the wretched dragon.",
@@ -107,6 +112,28 @@ export default new Vuex.Store({
 				],
 			},
 			{
+				id: "10",
+				story:
+					"You Kill the 3 bandits and as you rummage through their things you happen to find a steel sword and a potion of healing. Since you brought Billy along, you need to share an item. Do you...",
+				death: false,
+				choices: [
+					{
+						id: "18",
+						choiceText: "Keep the sword and give him the potion",
+					},
+					{
+						id: "12",
+						choiceText: "Keep the potion and give him the sword",
+					},
+				],
+			},
+			{
+				id: "11",
+				story:
+					"You don’t have any weapons and there are 3 of them and 1 of you. You get in one punch, and then you are killed and left in some bushes on the Remwil trail to never be seen again..",
+				death: true,
+			},
+			{
 				id: "12",
 				story:
 					"You now make it to the base of the lair and you see a corpse with a plate of armour on it",
@@ -123,20 +150,10 @@ export default new Vuex.Store({
 				],
 			},
 			{
-				id: "10",
+				id: "13",
 				story:
-					"You Kill the 3 bandits and as you rummage through their things you happen to find a steel sword and a potion of healing. Since you brought Billy along, you need to share an item. Do you...",
-				death: false,
-				choices: [
-					{
-						id: "18",
-						choiceText: "Keep the sword and give him the potion",
-					},
-					{
-						id: "12",
-						choiceText: "Keep the potion and give him the sword",
-					},
-				],
+					"You get to the dragon lair and he swallows you whole because you have no armour...",
+				death: true,
 			},
 			{
 				id: "14",
@@ -156,6 +173,12 @@ export default new Vuex.Store({
 				],
 			},
 			{
+				id: "15",
+				story:
+					"You get to the dragon lair and he swallows you whole because you have no armour...",
+				death: true,
+			},
+			{
 				id: "16",
 				story:
 					"You now make it to the lair and the dragon wakes up from hearing your footsteps.",
@@ -167,35 +190,10 @@ export default new Vuex.Store({
 					},
 				],
 			},
-
-			// Death Screens
-			{
-				id: "3",
-				story: "PLACEHOLDER: this is the end of the story for now.",
-				death: true,
-			},
 			{
 				id: "18",
 				story:
 					"They Kill Billy the Goblin, take his stuff, and chase after you until you trip on a rock, fall down a mountain, and die. The city is then burned to ashes by the dragon",
-				death: true,
-			},
-			{
-				id: "15",
-				story:
-					"You get to the dragon lair and he swallows you whole because you have no armour...",
-				death: true,
-			},
-			{
-				id: "13",
-				story:
-					"You get to the dragon lair and he swallows you whole because you have no armour...",
-				death: true,
-			},
-			{
-				id: "11",
-				story:
-					"You don’t have any weapons and there are 3 of them and 1 of you. You get in one punch, and then you are killed and left in some bushes on the Remwil trail to never be seen again..",
 				death: true,
 			},
 		],
