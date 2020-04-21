@@ -60,7 +60,8 @@ export default new Vuex.Store({
 			},
 			{
 				id: "3",
-				story: "PLACEHOLDER: this is the end of the story for now.",
+				story:
+					"You wake up to your house on fire. You try to escape but there is a chair against the door...you die.",
 				death: true,
 			},
 			{
@@ -70,82 +71,112 @@ export default new Vuex.Store({
 				death: false,
 				choices: [
 					{
-						id: "7",
+						id: "5",
 						choiceText: "No, this is something I must do alone",
 					},
 					{
-						id: "8",
+						id: "6",
 						choiceText: "I’ll need all the help I can get",
 					},
 				],
 			},
 			{
-				id: "7",
-				story:
-					"As you follow the path of Remwil on you way to the to the dragons lair you see ahead a group of bandits.",
-				death: false,
-				choices: [
-					{
-						id: "12",
-						choiceText: "Go around Bandits",
-					},
-					{
-						id: "11",
-						choiceText: "Fight Bandits",
-					},
-				],
-			},
-			{
-				id: "8",
+				id: "5",
 				story:
 					"As you follow the path of Remwil on you way to the to the dragons lair you see ahead a group of bandits.",
 				death: false,
 				choices: [
 					{
 						id: "10",
-						choiceText: "Wait until nightfall and both attack bandits",
+						choiceText: "Go around Bandits",
 					},
 					{
 						id: "9",
-						choiceText: "Send the Goblin to go talk to them",
+						choiceText: "Fight Bandits",
 					},
 				],
 			},
 			{
-				id: "10",
+				id: "6",
+				story:
+					"As you follow the path of Remwil on you way to the to the dragons lair you see ahead a group of bandits.",
+				death: false,
+				choices: [
+					{
+						id: "8",
+						choiceText: "Wait until nightfall and both attack bandits",
+					},
+					{
+						id: "7",
+						choiceText: "Send the Goblin to go talk to them",
+					},
+				],
+			},
+
+			{
+				id: "7",
+				story:
+					"They Kill Billy the Goblin, take his stuff, and chase after you until you trip on a rock, fall down a mountain, and die. The city is then burned to ashes by the dragon",
+				death: true,
+			},
+			{
+				id: "8",
 				story:
 					"You Kill the 3 bandits and as you rummage through their things you happen to find a steel sword and a potion of healing. Since you brought Billy along, you need to share an item. Do you...",
 				death: false,
 				choices: [
 					{
-						id: "18",
+						id: "10",
 						choiceText: "Keep the sword and give him the potion",
 					},
 					{
-						id: "12",
+						id: "10",
 						choiceText: "Keep the potion and give him the sword",
+					},
+				],
+			},
+			{
+				id: "9",
+				story:
+					"You don’t have any weapons and there are 3 of them and 1 of you. You get in one punch, and then you are killed and left in some bushes on the Remwil trail to never be seen again..",
+				death: true,
+			},
+			{
+				id: "10",
+				story:
+					"You now make it to the base of the lair and you see a corpse with a plate of armour on it",
+				death: false,
+				choices: [
+					{
+						id: "12",
+						choiceText: "Put on the armour",
+					},
+					{
+						id: "11",
+						choiceText: "Leave the armour out of respect for the corpse",
 					},
 				],
 			},
 			{
 				id: "11",
 				story:
-					"You don’t have any weapons and there are 3 of them and 1 of you. You get in one punch, and then you are killed and left in some bushes on the Remwil trail to never be seen again..",
+					"You get to the dragon lair and he swallows you whole because you have no armour...",
 				death: true,
 			},
 			{
 				id: "12",
 				story:
-					"You now make it to the base of the lair and you see a corpse with a plate of armour on it",
+					"You now make it to the lair and the dragon wakes up from hearing your footsteps.",
 				death: false,
 				choices: [
 					{
-						id: "14",
-						choiceText: "Put on the armour",
+						id: "13",
+						choiceText: "Charge ?",
 					},
 					{
-						id: "13",
-						choiceText: "Leave the armour out of respect for the corpse",
+						id: "14",
+						choiceText:
+							"Stand back and play let the dragon make the first move while you hold up your shield",
 					},
 				],
 			},
@@ -162,39 +193,10 @@ export default new Vuex.Store({
 				death: false,
 				choices: [
 					{
-						id: "15",
-						choiceText: "Charge ?",
-					},
-					{
-						id: "16",
-						choiceText:
-							"Stand back and play let the dragon make the first move while you hold up your shield",
-					},
-				],
-			},
-			{
-				id: "15",
-				story:
-					"You get to the dragon lair and he swallows you whole because you have no armour...",
-				death: true,
-			},
-			{
-				id: "16",
-				story:
-					"You now make it to the lair and the dragon wakes up from hearing your footsteps.",
-				death: false,
-				choices: [
-					{
 						id: "100",
 						choiceText: "Boss Fight!",
 					},
 				],
-			},
-			{
-				id: "18",
-				story:
-					"They Kill Billy the Goblin, take his stuff, and chase after you until you trip on a rock, fall down a mountain, and die. The city is then burned to ashes by the dragon",
-				death: true,
 			},
 		],
 	},
