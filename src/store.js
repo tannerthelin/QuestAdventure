@@ -130,7 +130,7 @@ export default new Vuex.Store({
 						choiceText: "Keep the sword and give him the potion",
 					},
 					{
-						id: "10",
+						id: "15",
 						choiceText: "Keep the potion and give him the sword",
 					},
 				],
@@ -146,6 +146,7 @@ export default new Vuex.Store({
 				story:
 					"You now make it to the base of the lair and you see a corpse with a plate of armour on it",
 				death: false,
+				weapon: true,
 				choices: [
 					{
 						id: "12",
@@ -168,6 +169,7 @@ export default new Vuex.Store({
 				story:
 					"You now make it to the lair and the dragon wakes up from hearing your footsteps.",
 				death: false,
+				armor: true,
 				choices: [
 					{
 						id: "13",
@@ -195,6 +197,23 @@ export default new Vuex.Store({
 					{
 						id: "100",
 						choiceText: "Boss Fight!",
+					},
+				],
+			},
+			{
+				id: "15",
+				story:
+					"You now make it to the base of the lair and you see a corpse with a plate of armour on it",
+				death: false,
+				potion: true,
+				choices: [
+					{
+						id: "12",
+						choiceText: "Put on the armour",
+					},
+					{
+						id: "11",
+						choiceText: "Leave the armour out of respect for the corpse",
 					},
 				],
 			},
