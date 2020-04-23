@@ -1,6 +1,6 @@
 <template>
 <div class="game-wrapper">
-    <GameHeader class="game-header" v-if="hasDied === false" />
+    <GameHeader class="game-header" v-if="hasDied === false" :weapon="weapon" :armor="armor" :potion="potion" />
     <!-- Stretches the height of the window -->
     <div class="main-container">
         
@@ -48,7 +48,10 @@ export default {
         return {
             // Set the first story to the first object in the store
             currentStory: this.$store.state.story[0],
-            hasDied: false
+            hasDied: false,
+            weapon: false,
+            armor: false,
+            potion: false
         }        
     },
     methods: {
@@ -57,6 +60,15 @@ export default {
             this.currentStory = this.$store.state.story[thisID];
             if (this.currentStory.death === true) {
                 this.hasDied = true
+            }
+            if (this.currentStory.weapon === true) {
+                this.weapon = true
+            }
+            if (this.currentStory.armor === true) {
+                this.armor = true
+            }
+            if (this.currentStory.potion === true) {
+                this.potion = true
             }
         }
     }
