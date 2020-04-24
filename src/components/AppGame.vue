@@ -9,8 +9,10 @@
    <div class="resetbutton">
     <router-link class="button" to="/Home">RESET</router-link>
 </div>
+            <div>
             <!-- Display the current story -->
             <p>{{currentStory.story}}</p>
+            </div>
 
             <!-- Display the current choices -->
             <div class="choices-container">
@@ -102,6 +104,48 @@ export default {
     display: flex;
 justify-content: flex-end;
 margin-bottom: 25px;
+}
+
+
+
+
+.typing > *{
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typingAnim 5s steps(50);
+}
+
+.typing > *::after{
+  content: ". .";
+  display: block;
+  position: absolute;
+  top: 1em;
+  left: .35em;
+}
+
+
+.typing > *::before{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 2.1em;
+  left: .25em;
+  width: 1em;
+  height: .1em;
+  border-radius: 100%;
+  background: #fff;
+  animation: typingSpeak .5s steps(2);
+  animation-iteration-count: 5;
+}
+
+
+@keyframes typingAnim{
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes typingSpeak{
+  0% { width: 1em; height: .1em }
+  100% { width: 1em; height: .5em; }
 }
 
 </style>
