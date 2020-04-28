@@ -193,12 +193,7 @@ export default new Vuex.Store({
 				story:
 					"You now make it to the lair and the dragon wakes up from hearing your footsteps.",
 				death: false,
-				choices: [
-					{
-						id: "100",
-						choiceText: "Boss Fight!",
-					},
-				],
+				bossFight: true,
 			},
 			{
 				id: "15",
