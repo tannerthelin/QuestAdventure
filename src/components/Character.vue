@@ -1,15 +1,19 @@
 <template>
     <!-- Stretches the height of the window -->
     <div class="main-container">
+        
+        <!-- Reset Button -->
+        <div class="resetbutton">
+            <router-link class="button" to="/Home">RESET</router-link>
+        </div>
+
         <!-- Constrains the main content to 700px -->
         <div class="content-container">
-             <div class="resetbutton">
-    <router-link class="button" to="/Home">RESET</router-link>
-</div>
+             
             <p>Select your character</p><br>
 
             <!-- A character select element (PEASANT) -->
-             <router-link to="/name">
+             <router-link class="char-select-router" to="/name">
             <div class="character-select" @click="changeCharacter('peasant')">
                 <img class="triangle" src="../assets/triangle.svg" width="7px">
                 <img class="character-image" src="../assets/char-peasant.png" alt="Peasant Character" width="81px">
@@ -21,7 +25,7 @@
              </router-link>
 
             <!-- A character select element (KNIGHT) -->
-            <router-link to="/name">
+            <router-link class="char-select-router" to="/name">
             <div class="character-select" @click="changeCharacter('knight')">
                 <img class="triangle" src="../assets/triangle.svg" width="7px">
                 <img class="character-image" src="../assets/char-knight.png" alt="Peasant Character" width="81px">
@@ -34,7 +38,7 @@
 
 
             <!-- A character select element (WIZARD) -->
-             <router-link to="/name">
+             <router-link class="char-select-router" to="/name">
             <div class="character-select" id="last-character" @click="changeCharacter('wizard')">
                 <img class="triangle" src="../assets/triangle.svg" width="7px">
                 <img class="character-image" src="../assets/char-wizard.png" alt="Peasant Character" width="81px">
@@ -106,26 +110,29 @@ export default {
         opacity: 0;
     }
 
-    a {
+    .char-select-router {
         padding: 0;
         margin: 0;
-        text-decoration: none;
-        color: white;
+        color: rgb(83, 83, 83);
+        text-decoration: none;        
     }
 
 
     a:hover {
-        color: rgb(83, 83, 83);
+        color: white;
     }
 
     .resetbutton {
-    display: flex;
-justify-content: flex-end;
-margin-bottom: 5px;
-}
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 5px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
 
-.button {
-    padding: 5px 15px;
-}
+    .main-container {
+        position: relative;
+    }
 
 </style>

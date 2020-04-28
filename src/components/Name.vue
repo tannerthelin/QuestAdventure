@@ -1,11 +1,15 @@
 <template>
     <!-- Stretches the height of the window -->
     <div class="main-container">
+
+        <!-- Reset Button -->
+        <div class="resetbutton">
+            <router-link class="button" to="/Home">RESET</router-link>
+        </div>
+
         <!-- Constrains the main content to 700px -->
         <div class="content-container">
-            <div class="resetbutton">
-    <router-link class="button" to="/Home">RESET</router-link>
-</div>
+            
             <p>What is your character's name?</p>
             <form action="/game">
                 <input type="text" v-model="name" input placeholder="Enter name here...">
@@ -54,6 +58,7 @@ export default {
         padding: 20px 12px;
         color: white;
         margin-top: 16px;
+        margin-bottom: 12px;
     }
 
     input:focus {
@@ -61,10 +66,16 @@ export default {
     }    
 
     .resetbutton {
-    display: flex;
-justify-content: flex-end;
-margin-bottom: 5px;
-}
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 5px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
 
+    .main-container {
+        position: relative;
+    }
 
 </style>

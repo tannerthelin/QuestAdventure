@@ -1,24 +1,5 @@
-import Vue from "vue";
-import App from "./App.vue";
-import VueResource from "vue-resource";
-import store from "./store";
-import VueRouter from "vue-router";
-import router from "./router";
-
-Vue.use(VueResource);
-
-Vue.config.productionTip = false;
-
-new Vue({
-	store,
-	router,
-	render: (h) => h(App),
-}).$mount("#app");
-
-new Vue({
-	router,
-	template: `
-  <html>
+<!DOCTYPE html>
+<html>
 <head>
     <title>Monster Slayer</title>
     <script src="https://npmcdn.com/vue/dist/vue.js"></script>
@@ -78,5 +59,3 @@ new Vue({
 <script src="app.js"></script>
 </body>
 </html>
-  `,
-}).$mount("#bossFight");

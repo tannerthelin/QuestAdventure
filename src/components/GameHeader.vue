@@ -17,30 +17,43 @@
 
                     <!-- the weapon item -->
                     <div class="inventory-item">
-                        <img src="../assets/sword.png" alt="sword" width="42px"/>
+                        <img v-if="weapon === false" src="../assets/sword.png" alt="sword" width="42px"/>
+                        <img v-if="weapon === true" src="../assets/sword-active.png" alt="sword" width="42px"/>
                         <p>weapon</p>
                     </div>
 
                      <!-- the armor item -->
                     <div class="inventory-item">
-                        <img src="../assets/armor.png" alt="armor" width="42px"/>
+                        <img v-if="armor === false" src="../assets/armor.png" alt="armor" width="42px"/>
+                        <img v-if="armor === true" src="../assets/shield-active.png" alt="armor" width="42px"/>
                         <p>Armor</p>
                     </div>
 
                      <!-- the potion item -->
                     <div class="inventory-item">
-                        <img src="../assets/potion.png" alt="potion" width="42px"/>
+                        <img v-if="potion === false" src="../assets/potion.png" alt="potion" width="42px"/>
+                        <img v-if="potion === true" src="../assets/potion-active.png" alt="potion" width="42px"/>
                         <p>Potion</p>
                     </div>
                 </div>
             </div> 
         </div> 
         <div></div>
+        <div class="button-container">
+            <div class="resetbutton">
+                <router-link class="button" to="/Home">RESET</router-link>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
+    props: {
+        weapon: Boolean, 
+        armor: Boolean, 
+        potion: Boolean
+    },
     data() {
         return {
         currentCharacter: 'peasant',
@@ -67,14 +80,26 @@ export default {
 
 <style scoped>
 
-.header-container {
+.button-container {
     padding: 20px;
-    
+}
+
+.button a {
+    margin-top: 0px !important;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100vw;
 }
 
 .player-content {
+    padding: 20px;
     display: flex;
     align-items: center;  
+    flex-grow: 0;
 }
 
 .player-image {
