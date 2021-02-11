@@ -8,7 +8,6 @@
     <br />
 
   <router-link class="button" to="/character">Click to get started</router-link>
-  <p class="button" @click="showAdmin = !showAdmin">Toggle Admin</p>
   <br />
 
     <!-- This is where we can store things in the databade (may need to be moved later) -->
