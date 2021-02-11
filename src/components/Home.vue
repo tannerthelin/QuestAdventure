@@ -3,7 +3,7 @@
     <img src="../assets/logo.png" alt="Simple Dungeon Logo" width="182px" />
     <p>
       Welcome to <span class="light-text">Simple Dungeon</span> -- a text
-      adventure game created for DGM-3780 at Utah Valley University.
+      adventure game created by Tanner Thelin & Friends.
     </p>
     <br />
 
@@ -12,17 +12,7 @@
   <br />
 
     <!-- This is where we can store things in the databade (may need to be moved later) -->
-    <div v-if="showAdmin">
-      <div class="form-group">
-        <label>Username</label>
-        <input class="form-control" type="text" v-model="user.username" />
-      </div>
-      <div class="form-group">
-        <label>Mail</label>
-        <input class="form-control" type="text" v-model="user.email" />
-      </div>
-      <button class="btn btn-primary" @click="submit">Submit</button>
-    </div>
+    
   </div>
 </template>
 
